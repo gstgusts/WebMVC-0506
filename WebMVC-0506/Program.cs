@@ -14,7 +14,7 @@ namespace WebMVC_0506
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<SchoolContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
