@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebMVC_0506.Data.Models
 {
@@ -6,6 +7,9 @@ namespace WebMVC_0506.Data.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CourseID { get; set; }
+
+        [MaxLength(255)]
+        [Required]
         public string Title { get; set; }
         public int Credits { get; set; }
 
